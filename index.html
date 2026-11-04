@@ -1,693 +1,956 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#080d25">
 
-  <title>CV Mentor | Professional Resume Writing & Review</title>
+<title>CV Mentor | Your Career Deserves a Stronger Resume</title>
+<meta name="description" content="Get a professional resume review from CV Mentor. Improve your resume, strengthen your career profile, and prepare for your next opportunity.">
 
-  <meta
-    name="description"
-    content="Build a resume that opens doors. CV Mentor offers professional resume writing, ATS optimization, and resume reviews for ambitious professionals."
-  />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
-  <meta name="theme-color" content="#0b1224" />
+<style>
+:root {
+  --bg: #080d25;
+  --panel: #101831;
+  --blue: #5685ff;
+  --purple: #a855f7;
+  --cyan: #55e6ff;
+  --white: #f8faff;
+  --muted: #a8b4d1;
+  --border: rgba(255,255,255,.10);
+}
 
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+* { box-sizing: border-box; margin: 0; padding: 0; }
 
-  <link
-    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
-    rel="stylesheet"
-  />
+html { scroll-behavior: smooth; }
 
-  <link rel="stylesheet" href="style.css" />
+body {
+  font-family: 'DM Sans', sans-serif;
+  background: var(--bg);
+  color: var(--white);
+  overflow-x: hidden;
+}
+
+a { color: inherit; text-decoration: none; }
+
+button, a { -webkit-tap-highlight-color: transparent; }
+
+.container {
+  width: min(1160px, 90%);
+  margin: auto;
+}
+
+.gradient-text {
+  background: linear-gradient(100deg, #65caff, #7b80ff, #c27aff);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(8,13,37,.78);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid var(--border);
+}
+
+nav {
+  height: 78px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+  font-family: Manrope, sans-serif;
+  font-weight: 800;
+  font-size: 23px;
+}
+
+.logo-mark {
+  width: 39px;
+  height: 39px;
+  display: grid;
+  place-items: center;
+  border-radius: 13px;
+  background: linear-gradient(135deg, #5d7cff, #a44bff);
+  box-shadow: 0 0 30px #7558ff55;
+  font-size: 23px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  color: #c4cbe0;
+  font-size: 14px;
+}
+
+.nav-links a:hover { color: white; }
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 14px 24px;
+  border-radius: 13px;
+  border: 0;
+  font-weight: 700;
+  font-family: inherit;
+  cursor: pointer;
+  transition: .3s ease;
+}
+
+.btn-primary {
+  color: white;
+  background: linear-gradient(110deg, #476dff, #9254ff);
+  box-shadow: 0 8px 35px #6a58ff45;
+}
+
+.btn-primary:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 45px #7a60ff70;
+}
+
+.btn-outline {
+  border: 1px solid #ffffff25;
+  background: #ffffff08;
+  color: white;
+}
+
+.btn-outline:hover { background: #ffffff15; }
+
+.menu-toggle { display: none; }
+
+.hero {
+  position: relative;
+  padding: 100px 0 110px;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  width: 650px;
+  height: 650px;
+  right: -160px;
+  top: -160px;
+  background: radial-gradient(circle, #5a49ff35, transparent 68%);
+  pointer-events: none;
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.05fr .95fr;
+  gap: 55px;
+  align-items: center;
+}
+
+.eyebrow {
+  display: inline-flex;
+  gap: 9px;
+  align-items: center;
+  padding: 9px 14px;
+  background: #ffffff09;
+  border: 1px solid #ffffff15;
+  border-radius: 100px;
+  color: #b6c7ff;
+  font-size: 13px;
+  margin-bottom: 25px;
+}
+
+.pulse {
+  width: 8px;
+  height: 8px;
+  background: #67f5c1;
+  border-radius: 50%;
+  box-shadow: 0 0 15px #67f5c1;
+}
+
+h1, h2, h3 {
+  font-family: Manrope, sans-serif;
+}
+
+.hero h1 {
+  font-size: clamp(43px, 5.5vw, 70px);
+  line-height: 1.08;
+  letter-spacing: -3px;
+  margin-bottom: 24px;
+}
+
+.hero-copy {
+  font-size: 18px;
+  color: var(--muted);
+  line-height: 1.8;
+  max-width: 520px;
+  margin-bottom: 30px;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 13px;
+  flex-wrap: wrap;
+}
+
+.hero-note {
+  margin-top: 22px;
+  font-size: 13px;
+  color: #8d9ab8;
+}
+
+.hero-visual {
+  position: relative;
+  min-height: 440px;
+  display: grid;
+  place-items: center;
+}
+
+.hero-image {
+  width: 100%;
+  max-width: 530px;
+  border-radius: 28px;
+  object-fit: cover;
+  filter: drop-shadow(0 25px 55px #5a4cff25);
+  animation: float 6s ease-in-out infinite;
+  mask-image: linear-gradient(to bottom, black 85%, transparent 100%);
+}
+
+.floating-card {
+  position: absolute;
+  background: #131e3c;
+  border: 1px solid #ffffff20;
+  box-shadow: 0 20px 60px #0005;
+  backdrop-filter: blur(15px);
+  border-radius: 16px;
+  padding: 17px 20px;
+  animation: float 5s ease-in-out infinite;
+}
+
+.card-one { top: 35px; left: -15px; }
+.card-two { bottom: 45px; right: -5px; animation-delay: -2s; }
+
+.card-label { font-size: 12px; color: #a6b5d5; }
+.card-value { font-size: 19px; font-weight: 800; margin-top: 6px; }
+
+@keyframes float {
+  0%,100% { transform: translateY(0); }
+  50% { transform: translateY(-14px); }
+}
+
+@keyframes gradientMove {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 100% 50%; }
+}
+
+section { padding: 90px 0; }
+
+.section-heading {
+  text-align: center;
+  max-width: 650px;
+  margin: 0 auto 55px;
+}
+
+.section-heading h2 {
+  font-size: clamp(30px, 4vw, 44px);
+  letter-spacing: -1.5px;
+  margin-bottom: 15px;
+}
+
+.section-heading p {
+  color: var(--muted);
+  line-height: 1.8;
+}
+
+.features {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.feature {
+  background: linear-gradient(145deg, #131d3a, #0d142c);
+  border: 1px solid var(--border);
+  padding: 32px;
+  border-radius: 20px;
+  transition: .35s;
+}
+
+.feature:hover {
+  transform: translateY(-7px);
+  border-color: #7c78ff80;
+  box-shadow: 0 20px 50px #0002;
+}
+
+.feature-icon {
+  width: 54px;
+  height: 54px;
+  border-radius: 16px;
+  display: grid;
+  place-items: center;
+  font-size: 25px;
+  background: linear-gradient(135deg, #526eff30, #b44eff30);
+  margin-bottom: 23px;
+}
+
+.feature h3 { font-size: 19px; margin-bottom: 12px; }
+
+.feature p {
+  color: var(--muted);
+  line-height: 1.7;
+  font-size: 14px;
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 65px;
+  align-items: center;
+}
+
+.about-image {
+  width: 100%;
+  border-radius: 24px;
+  border: 1px solid var(--border);
+}
+
+.about-copy h2 {
+  font-size: 38px;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+
+.about-copy p {
+  color: var(--muted);
+  line-height: 1.85;
+  margin-bottom: 22px;
+}
+
+.check-list {
+  list-style: none;
+  display: grid;
+  gap: 14px;
+  margin-top: 25px;
+}
+
+.check-list li {
+  display: flex;
+  gap: 12px;
+  color: #dce4f8;
+}
+
+.check-list span { color: #6ef0bf; }
+
+.process-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.process {
+  padding: 28px;
+  background: #ffffff05;
+  border: 1px solid var(--border);
+  border-radius: 18px;
+}
+
+.step {
+  font-size: 13px;
+  color: #8f9cff;
+  margin-bottom: 20px;
+}
+
+.process h3 { margin-bottom: 12px; }
+
+.process p {
+  font-size: 14px;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.review-section {
+  background:
+    radial-gradient(ellipse at 50% 0%, #6551ff18, transparent 65%);
+}
+
+.review-card {
+  max-width: 850px;
+  margin: auto;
+  text-align: center;
+  padding: 35px;
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  background: #ffffff06;
+}
+
+.review-card p {
+  color: var(--muted);
+  line-height: 1.8;
+  margin: 15px 0;
+}
+
+.review-card strong { color: white; }
+
+.apply-section {
+  padding: 75px 0 110px;
+}
+
+.apply-card {
+  position: relative;
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  gap: 40px;
+  padding: 65px;
+  border-radius: 28px;
+  border: 1px solid #ffffff18;
+  background:
+    radial-gradient(ellipse at 90% 10%, #7849ff50, transparent 45%),
+    linear-gradient(135deg, #111d42, #151034);
+}
+
+.apply-card h2 {
+  font-size: clamp(32px, 4vw, 48px);
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+
+.apply-card p {
+  color: #b8c4e1;
+  line-height: 1.8;
+  margin-bottom: 25px;
+}
+
+.apply-points {
+  display: grid;
+  gap: 12px;
+  color: #dce5ff;
+  font-size: 14px;
+  margin-bottom: 30px;
+}
+
+.form-preview {
+  background: #ffffff;
+  color: #101831;
+  padding: 35px;
+  border-radius: 20px;
+  box-shadow: 0 30px 90px #0004;
+}
+
+.form-preview h3 { font-size: 24px; margin-bottom: 12px; }
+
+.form-preview p {
+  color: #667085;
+  font-size: 14px;
+  margin-bottom: 24px;
+}
+
+.form-preview .btn {
+  width: 100%;
+  margin-top: 10px;
+}
+
+.form-preview small {
+  display: block;
+  margin-top: 15px;
+  color: #7a8294;
+  line-height: 1.6;
+}
+
+.faq-list {
+  max-width: 760px;
+  margin: auto;
+}
+
+details {
+  border-bottom: 1px solid var(--border);
+  padding: 22px 0;
+}
+
+summary {
+  cursor: pointer;
+  font-weight: 700;
+  list-style: none;
+}
+
+summary::after {
+  content: "+";
+  float: right;
+  color: #8b83ff;
+  font-size: 22px;
+}
+
+details[open] summary::after { content: "−"; }
+
+details p {
+  color: var(--muted);
+  line-height: 1.8;
+  padding-top: 15px;
+}
+
+footer {
+  padding: 35px 0;
+  border-top: 1px solid var(--border);
+  color: #929fbc;
+  font-size: 13px;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.footer-links { display: flex; gap: 20px; }
+
+.reveal {
+  opacity: 0;
+  transform: translateY(25px);
+  transition: opacity .7s ease, transform .7s ease;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.whatsapp {
+  position: fixed;
+  right: 22px;
+  bottom: 22px;
+  z-index: 99;
+  width: 55px;
+  height: 55px;
+  display: grid;
+  place-items: center;
+  background: #20c878;
+  color: white;
+  border-radius: 50%;
+  font-size: 24px;
+  box-shadow: 0 8px 30px #20c87855;
+  transition: .3s;
+}
+
+.whatsapp:hover { transform: scale(1.1); }
+
+@media (max-width: 850px) {
+  .hero-grid, .about-grid, .apply-card {
+    grid-template-columns: 1fr;
+  }
+
+  .hero { padding: 65px 0; }
+  .hero-visual { min-height: 350px; }
+  .features, .process-grid { grid-template-columns: 1fr 1fr; }
+  .apply-card { padding: 35px; }
+  .nav-links { gap: 15px; }
+}
+
+@media (max-width: 600px) {
+  nav { height: 70px; }
+  .menu-toggle {
+    display: block;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 25px;
+    cursor: pointer;
+  }
+
+  .nav-links {
+    display: none;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    right: 0;
+    padding: 25px;
+    background: #0b1129;
+    flex-direction: column;
+    align-items: stretch;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .nav-links.open { display: flex; }
+
+  .nav-links .btn { text-align: center; }
+  .hero h1 { letter-spacing: -1.5px; }
+  .hero-copy { font-size: 16px; }
+  .hero-visual { min-height: 270px; }
+  .card-one { left: 0; top: 10px; }
+  .card-two { right: 0; bottom: 10px; }
+  .features, .process-grid { grid-template-columns: 1fr; }
+  section { padding: 65px 0; }
+  .apply-card { padding: 25px; }
+  .form-preview { padding: 25px; }
+  .footer-content { flex-direction: column; text-align: center; }
+}
+</style>
 </head>
 
 <body>
 
-  <!-- Navigation -->
-  <header class="header" id="top">
-    <div class="container nav-container">
-
-      <a href="#top" class="brand" aria-label="CV Mentor home">
-        <span class="brand-icon">CV</span>
-        <span class="brand-text">CV<span>Mentor</span></span>
+<header>
+  <div class="container">
+    <nav>
+      <a href="#" class="logo">
+        <span class="logo-mark">✓</span>
+        CV Mentor
       </a>
 
-      <button
-        class="menu-toggle"
-        id="menuToggle"
-        aria-label="Open navigation menu"
-        aria-expanded="false"
-      >
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
+      <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">☰</button>
 
-      <nav class="navigation" id="navigation">
-        <a href="#services">Services</a>
-        <a href="#process">How it works</a>
-        <a href="#about">Why CV Mentor</a>
-        <a href="#faq">FAQs</a>
-        <a href="#contact" class="nav-cta">Get started <span>↗</span></a>
-      </nav>
+      <div class="nav-links" id="navLinks">
+        <a href="#home">Home</a>
+        <a href="#why-us">Why Us</a>
+        <a href="#process">How It Works</a>
+        <a href="#faq">FAQ</a>
+        <a href="#apply" class="btn btn-primary">Get Free Review ↗</a>
+      </div>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+<section class="hero" id="home">
+  <div class="container hero-grid">
+
+    <div class="reveal">
+      <div class="eyebrow">
+        <span class="pulse"></span>
+        Resume Review · Free to Get Started
+      </div>
+
+      <h1>
+        Your Career<br>
+        Deserves a<br>
+        <span class="gradient-text">Stronger Resume.</span>
+      </h1>
+
+      <p class="hero-copy">
+        Your experience deserves to stand out.
+        Get expert feedback to improve your resume,
+        communicate your skills, and move confidently
+        toward your next career opportunity.
+      </p>
+
+      <div class="hero-buttons">
+        <a href="#apply" class="btn btn-primary">
+          Get Free Resume Review →
+        </a>
+        <a href="#process" class="btn btn-outline">
+          How it works
+        </a>
+      </div>
+
+      <p class="hero-note">✦ No complicated process. Just a better resume.</p>
+    </div>
+
+    <div class="hero-visual reveal">
+      <img
+        class="hero-image"
+        src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=1100&q=85"
+        alt="Professional reviewing career documents on a laptop">
+
+      <div class="floating-card card-one">
+        <div class="card-label">Your next career move</div>
+        <div class="card-value">Starts with your CV ✨</div>
+      </div>
+
+      <div class="floating-card card-two">
+        <div class="card-label">Resume improvement</div>
+        <div class="card-value">✓ Clear · Professional</div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section id="why-us">
+  <div class="container">
+
+    <div class="section-heading reveal">
+      <div class="eyebrow">A better resume starts here</div>
+      <h2>More than just <span class="gradient-text">a document.</span></h2>
+      <p>Your resume is your professional story. Let's make sure it tells the right one.</p>
+    </div>
+
+    <div class="features">
+
+      <div class="feature reveal">
+        <div class="feature-icon">🎯</div>
+        <h3>Role-Focused Feedback</h3>
+        <p>Get recommendations aligned with your target job and career direction.</p>
+      </div>
+
+      <div class="feature reveal">
+        <div class="feature-icon">⚡</div>
+        <h3>ATS-Friendly Guidance</h3>
+        <p>Understand how to improve resume structure, readability, and relevant keywords.</p>
+      </div>
+
+      <div class="feature reveal">
+        <div class="feature-icon">💎</div>
+        <h3>Professional Presentation</h3>
+        <p>Make your experience, achievements, and skills easier for recruiters to understand.</p>
+      </div>
 
     </div>
-  </header>
-
-
-  <!-- Hero -->
-  <main>
-
-    <section class="hero">
-      <div class="hero-glow hero-glow-one"></div>
-      <div class="hero-glow hero-glow-two"></div>
-
-      <div class="container hero-grid">
-
-        <div class="hero-content reveal">
-
-          <div class="eyebrow">
-            <span class="eyebrow-dot"></span>
-            Your next career move starts here
-          </div>
-
-          <h1>
-            Your experience<br />
-            deserves a <span>better resume.</span>
-          </h1>
-
-          <p class="hero-description">
-            Stand out with a professionally crafted resume that highlights
-            your strengths, tells your story, and helps you move confidently
-            toward your next opportunity.
-          </p>
-
-          <div class="hero-actions">
-            <a href="#contact" class="button button-primary">
-              Upgrade my resume <span>↗</span>
-            </a>
-
-            <a href="#services" class="button button-secondary">
-              Explore services
-            </a>
-          </div>
-
-          <div class="hero-proof">
-            <div class="proof-avatars" aria-hidden="true">
-              <span>R</span>
-              <span>A</span>
-              <span>P</span>
-              <span>+</span>
-            </div>
-
-            <div>
-              <strong>Career-focused resume support</strong>
-              <p>Personalized guidance for your next move</p>
-            </div>
-          </div>
-
-        </div>
-
-
-        <!-- Resume preview -->
-        <div class="hero-visual reveal">
-
-          <div class="floating-label floating-label-top">
-            <span class="floating-icon">✦</span>
-            ATS-friendly structure
-          </div>
-
-          <div class="resume-card">
-
-            <div class="resume-top">
-              <div class="resume-avatar">JD</div>
-
-              <div>
-                <h3>Jordan Davis</h3>
-                <p>Cloud Infrastructure Engineer</p>
-              </div>
-
-              <div class="resume-status">
-                <span></span> Resume preview
-              </div>
-            </div>
-
-            <div class="resume-contact">
-              jordan@email.com &nbsp; • &nbsp; LinkedIn &nbsp; • &nbsp; Pune, India
-            </div>
-
-            <div class="resume-section">
-              <h4>PROFESSIONAL SUMMARY</h4>
-              <div class="resume-line long"></div>
-              <div class="resume-line long"></div>
-              <div class="resume-line medium"></div>
-            </div>
-
-            <div class="resume-section">
-              <h4>PROFESSIONAL EXPERIENCE</h4>
-
-              <div class="resume-job">
-                <div class="resume-job-heading">
-                  <strong>Senior Cloud Engineer</strong>
-                  <span>2023 — Present</span>
-                </div>
-
-                <div class="resume-line long"></div>
-                <div class="resume-line medium"></div>
-              </div>
-
-              <div class="resume-job">
-                <div class="resume-job-heading">
-                  <strong>Infrastructure Engineer</strong>
-                  <span>2020 — 2023</span>
-                </div>
-
-                <div class="resume-line long"></div>
-                <div class="resume-line short"></div>
-              </div>
-            </div>
-
-            <div class="resume-section">
-              <h4>CORE SKILLS</h4>
-
-              <div class="resume-skills">
-                <span>Cloud</span>
-                <span>Linux</span>
-                <span>Automation</span>
-                <span>Infrastructure</span>
-              </div>
-            </div>
-
-            <div class="resume-bottom">
-              <span>CV MENTOR</span>
-              <span>Career-ready presentation</span>
-            </div>
-
-          </div>
-
-          <div class="floating-label floating-label-bottom">
-            <span class="check-icon">✓</span>
-            Your experience. Clearly presented.
-          </div>
-
-        </div>
-
-      </div>
-    </section>
-
-
-    <!-- Offer -->
-    <section class="offer-section">
-      <div class="container">
-
-        <div class="offer-card reveal">
-
-          <div class="offer-left">
-            <div class="offer-tag">
-              <span>✦</span> LIMITED-TIME OFFER
-            </div>
-
-            <h2>Give your resume the attention it deserves.</h2>
-
-            <p>
-              Get your resume reviewed by CV Mentor at a special introductory price.
-            </p>
-          </div>
-
-          <div class="offer-price">
-            <span class="offer-price-label">Resume review</span>
-
-            <div class="price">
-              <span class="currency">₹</span>99
-            </div>
-
-            <span class="offer-validity">Offer valid until November 30, 2026</span>
-
-            <a
-              href="https://wa.me/919325300574?text=Hi%20CV%20Mentor%2C%20I%20am%20interested%20in%20the%20%E2%82%B999%20resume%20review%20offer."
-              class="button button-light"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Claim this offer <span>↗</span>
-            </a>
-          </div>
-
-        </div>
-
-      </div>
-    </section>
-
-
-    <!-- Services -->
-    <section class="section services-section" id="services">
-
-      <div class="container">
-
-        <div class="section-heading reveal">
-          <div class="section-label">WHAT WE DO</div>
-
-          <h2>
-            The right resume for<br />
-            <span>your next opportunity.</span>
-          </h2>
-
-          <p>
-            Whether you're starting out, changing careers, or aiming higher,
-            we help present your professional story with clarity.
-          </p>
-        </div>
-
-
-        <div class="services-grid">
-
-          <article class="service-card reveal">
-
-            <div class="service-icon icon-blue">✎</div>
-
-            <div class="service-number">01</div>
-
-            <h3>Resume Writing</h3>
-
-            <p>
-              A professionally written resume that highlights your experience,
-              achievements, and career strengths.
-            </p>
-
-            <a href="#contact" class="text-link">
-              Discuss your resume <span>↗</span>
-            </a>
-
-          </article>
-
-
-          <article class="service-card service-card-featured reveal">
-
-            <div class="service-icon icon-purple">⌕</div>
-
-            <div class="service-number">02</div>
-
-            <div class="service-badge">POPULAR</div>
-
-            <h3>Resume Review</h3>
-
-            <p>
-              Get practical feedback on your existing resume, including
-              structure, clarity, presentation, and improvement areas.
-            </p>
-
-            <a href="#contact" class="text-link">
-              Get your resume reviewed <span>↗</span>
-            </a>
-
-          </article>
-
-
-          <article class="service-card reveal">
-
-            <div class="service-icon icon-green">↗</div>
-
-            <div class="service-number">03</div>
-
-            <h3>ATS Optimization</h3>
-
-            <p>
-              Improve resume readability and organization with relevant
-              keywords and a clear, recruiter-friendly structure.
-            </p>
-
-            <a href="#contact" class="text-link">
-              Improve my resume <span>↗</span>
-            </a>
-
-          </article>
-
-        </div>
-
+  </div>
+</section>
+
+<section>
+  <div class="container about-grid">
+
+    <div class="reveal">
+      <img
+        class="about-image"
+        src="https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&w=1000&q=85"
+        alt="Professional working on a resume and career development">
+    </div>
+
+    <div class="about-copy reveal">
+      <div class="eyebrow">Your next opportunity matters</div>
+      <h2>Make your experience work <span class="gradient-text">for you.</span></h2>
+
+      <p>
+        A strong resume does more than list responsibilities.
+        It highlights your strengths, demonstrates your impact,
+        and helps recruiters understand the value you bring.
+      </p>
+
+      <ul class="check-list">
+        <li><span>✓</span> Improve clarity and resume structure</li>
+        <li><span>✓</span> Highlight relevant skills and achievements</li>
+        <li><span>✓</span> Identify areas for ATS improvement</li>
+        <li><span>✓</span> Align your profile with your target role</li>
+      </ul>
+    </div>
+
+  </div>
+</section>
+
+<section id="process">
+  <div class="container">
+
+    <div class="section-heading reveal">
+      <div class="eyebrow">Simple. Clear. Career-focused.</div>
+      <h2>How <span class="gradient-text">CV Mentor</span> works</h2>
+      <p>Getting started takes just a few simple steps.</p>
+    </div>
+
+    <div class="process-grid">
+
+      <div class="process reveal">
+        <div class="step">STEP 01</div>
+        <h3>Share Your Resume</h3>
+        <p>Complete the review request form and upload your current CV.</p>
       </div>
 
-    </section>
-
-
-    <!-- Credibility -->
-    <section class="credibility-section" id="about">
-
-      <div class="container credibility-grid">
-
-        <div class="credibility-content reveal">
-
-          <div class="section-label">YOUR CAREER. OUR FOCUS.</div>
-
-          <h2>
-            Your achievements<br />
-            should never get<br />
-            <span>lost on a page.</span>
-          </h2>
-
-          <p>
-            A resume is more than a list of responsibilities. It is an
-            opportunity to communicate your value, experience, and potential.
-          </p>
-
-          <p>
-            CV Mentor helps professionals present their career journey
-            with a clear, structured, and professional resume.
-          </p>
-
-          <a href="#contact" class="button button-primary">
-            Let's improve your resume <span>↗</span>
-          </a>
-
-        </div>
-
-
-        <div class="credibility-panel reveal">
-
-          <div class="credibility-panel-header">
-            <span class="panel-dot"></span>
-            PROFESSIONAL RESUME SUPPORT
-          </div>
-
-          <div class="credibility-stat">
-            <span class="stat-icon">✦</span>
-            <div>
-              <h3>Professionals</h3>
-              <p>Resume support for professionals working at organizations including Microsoft and Amazon.</p>
-            </div>
-          </div>
-
-          <div class="panel-divider"></div>
-
-          <div class="credibility-stat">
-            <span class="stat-icon">◎</span>
-            <div>
-              <h3>Personalized approach</h3>
-              <p>Resume guidance shaped around your experience, target role, and career goals.</p>
-            </div>
-          </div>
-
-          <div class="panel-divider"></div>
-
-          <div class="credibility-stat">
-            <span class="stat-icon">↗</span>
-            <div>
-              <h3>Career-focused presentation</h3>
-              <p>Clear formatting, relevant achievements, and professional storytelling.</p>
-            </div>
-          </div>
-
-          <div class="panel-note">
-            <span>✦</span>
-            Your career story, presented with purpose.
-          </div>
-
-        </div>
-
+      <div class="process reveal">
+        <div class="step">STEP 02</div>
+        <h3>Get Your Resume Reviewed</h3>
+        <p>Your resume will be reviewed based on your experience and target role.</p>
       </div>
 
-    </section>
-
-
-    <!-- Process -->
-    <section class="section process-section" id="process">
-
-      <div class="container">
-
-        <div class="section-heading reveal">
-          <div class="section-label">SIMPLE PROCESS</div>
-
-          <h2>
-            From resume to <span>ready.</span>
-          </h2>
-
-          <p>
-            Getting started is straightforward. Tell us where you are
-            and where you want to go.
-          </p>
-        </div>
-
-
-        <div class="process-grid">
-
-          <div class="process-step reveal">
-            <div class="step-number">01</div>
-            <div class="step-line"></div>
-            <h3>Share your resume</h3>
-            <p>Send your existing resume and tell us about your career goals.</p>
-          </div>
-
-          <div class="process-step reveal">
-            <div class="step-number">02</div>
-            <div class="step-line"></div>
-            <h3>Discuss your needs</h3>
-            <p>We understand your target role and the improvements you need.</p>
-          </div>
-
-          <div class="process-step reveal">
-            <div class="step-number">03</div>
-            <div class="step-line"></div>
-            <h3>Improve your resume</h3>
-            <p>Receive professional guidance to help strengthen your resume.</p>
-          </div>
-
-        </div>
-
+      <div class="process reveal">
+        <div class="step">STEP 03</div>
+        <h3>Improve & Move Forward</h3>
+        <p>Use the feedback to strengthen your resume and prepare for new opportunities.</p>
       </div>
 
-    </section>
+    </div>
+  </div>
+</section>
 
+<section class="review-section">
+  <div class="container">
 
-    <!-- Feedback -->
-    <section class="feedback-section">
+    <div class="section-heading reveal">
+      <div class="eyebrow">Built around your career goals</div>
+      <h2>Every career has a <span class="gradient-text">next chapter.</span></h2>
+      <p>Whether you're starting out, switching careers, or targeting your next role, your resume should reflect your potential.</p>
+    </div>
 
-      <div class="container">
+    <div class="review-card reveal">
+      <div style="font-size:34px">✦</div>
+      <h3>Your experience. Your ambitions. Your next opportunity.</h3>
+      <p>
+        CV Mentor is here to help you present your professional journey
+        with greater clarity and confidence.
+      </p>
+      <strong>Let's make your next application stronger.</strong>
+    </div>
 
-        <div class="section-heading reveal">
-          <div class="section-label">CLIENT EXPERIENCES</div>
+  </div>
+</section>
 
-          <h2>
-            Every career story<br />
-            <span>deserves to be heard.</span>
-          </h2>
+<section class="apply-section" id="apply">
+  <div class="container">
 
-          <p>
-            We value the trust professionals place in us when they share
-            their career journeys.
-          </p>
-        </div>
+    <div class="apply-card reveal">
 
-
-        <div class="feedback-grid">
-
-          <!-- Replace these cards with genuine client feedback before publishing. -->
-
-          <article class="feedback-card reveal">
-            <div class="feedback-stars">★★★★★</div>
-
-            <p>
-              “I was looking for a better way to showcase my skills and experience for Cloud and SRE roles. CV Mentor helped me make my resume more structured and impactful. I got shortlisted for relevant opportunities, and I’m grateful for the guidance. Highly recommended!”
-            </p>
-
-            <div class="feedback-author">
-              <div class="author-avatar">C</div>
-              <div>
-                <strong>Ghanshyam</strong>
-                <span>Software Engineer</span>
-              </div>
-            </div>
-          </article>
-
-
-          <article class="feedback-card reveal">
-            <div class="feedback-stars">★★★★★</div>
-
-            <p>
-              “CV Mentor helped me improve my resume and present my experience more effectively. The guidance was valuable, and I was able to get shortlisted for a DevOps Engineer role. I really appreciate the support and professionalism.”
-            </p>
-
-            <div class="feedback-author">
-              <div class="author-avatar author-avatar-purple">C</div>
-              <div>
-                <strong>Pratik</strong>
-                <span>DevOps Engineer</span>
-              </div>
-            </div>
-          </article>
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <!-- FAQ -->
-    <section class="section faq-section" id="faq">
-
-      <div class="container faq-grid">
-
-        <div class="faq-heading reveal">
-
-          <div class="section-label">COMMON QUESTIONS</div>
-
-          <h2>
-            A few things<br />
-            you might <span>wonder.</span>
-          </h2>
-
-          <p>
-            Have another question? Contact us directly and we’ll be happy
-            to discuss your requirements.
-          </p>
-
-          <a href="#contact" class="text-link">
-            Ask us a question <span>↗</span>
-          </a>
-
-        </div>
-
-
-        <div class="faq-list reveal">
-
-          <details>
-            <summary>What is included in the ₹99 resume review?</summary>
-            <p>
-              The introductory offer is for resume review. Contact CV Mentor
-              to confirm the review scope, turnaround time, and delivery details
-              before placing your order.
-            </p>
-          </details>
-
-          <details>
-            <summary>Can you help with ATS-friendly resumes?</summary>
-            <p>
-              Yes. CV Mentor can help improve resume structure, readability,
-              relevant keywords, and alignment with your target role.
-              No resume can guarantee selection or interview calls.
-            </p>
-          </details>
-
-          <details>
-            <summary>How do I get started?</summary>
-            <p>
-              Click the WhatsApp button, share your resume and target role,
-              and discuss the service that best fits your needs.
-            </p>
-          </details>
-
-          <details>
-            <summary>Can you help experienced professionals?</summary>
-            <p>
-              Yes. Resume support can be tailored for experienced professionals,
-              career transitions, and people targeting new opportunities.
-            </p>
-          </details>
-
-        </div>
-
-      </div>
-
-    </section>
-
-
-    <!-- CTA -->
-    <section class="final-cta" id="contact">
-
-      <div class="cta-orb cta-orb-one"></div>
-      <div class="cta-orb cta-orb-two"></div>
-
-      <div class="container final-cta-content reveal">
-
-        <div class="cta-label">
-          <span></span> YOUR NEXT CHAPTER STARTS HERE
-        </div>
+      <div>
+        <div class="eyebrow">Your next step starts here</div>
 
         <h2>
-          Ready to make your<br />
-          resume <span>stand out?</span>
+          Ready for a<br>
+          <span class="gradient-text">Stronger Resume?</span>
         </h2>
 
         <p>
-          Let’s work together to present your experience with confidence.
+          Share your resume and career goals with us.
+          Start your resume review request today.
         </p>
 
-        <div class="cta-buttons">
-
-          <a
-            href="https://wa.me/919325300574?text=Hi%20CV%20Mentor%2C%20I%20would%20like%20to%20discuss%20your%20resume%20services."
-            class="button button-white"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <span class="whatsapp-icon">◉</span>
-            Chat on WhatsApp
-          </a>
-
-          <a
-            href="mailto:cvmentorsupport@gmail.com?subject=Resume%20Services%20Inquiry"
-            class="button button-outline-white"
-          >
-            Email us <span>↗</span>
-          </a>
-
+        <div class="apply-points">
+          <span>✓ Personalized resume feedback</span>
+          <span>✓ Career-focused recommendations</span>
+          <span>✓ Easy application process</span>
         </div>
 
-        <div class="cta-contact">
-          <span>WhatsApp: +91 9325300574</span>
-          <span>•</span>
-          <span>cvmentorsupport@gmail.com</span>
-        </div>
-
+        <a href="https://forms.gle/xQvBcXhkEY7LxbaZ8"
+           target="_blank"
+           rel="noopener noreferrer"
+           class="btn btn-primary">
+          Submit Your Resume for Review ↗
+        </a>
       </div>
 
-    </section>
+      <div class="form-preview">
+        <div style="font-size:35px;margin-bottom:15px">📄</div>
+        <h3>Let's review your CV</h3>
+        <p>
+          Tell us about your experience, target role,
+          and upload your resume through our secure
+          Google Form.
+        </p>
 
-  </main>
+        <a href="https://forms.gle/xQvBcXhkEY7LxbaZ8"
+           target="_blank"
+           rel="noopener noreferrer"
+           class="btn btn-primary">
+          Open Resume Review Form →
+        </a>
 
-
-  <!-- Footer -->
-  <footer class="footer">
-
-    <div class="container footer-top">
-
-      <a href="#top" class="brand footer-brand">
-        <span class="brand-icon">CV</span>
-        <span class="brand-text">CV<span>Mentor</span></span>
-      </a>
-
-      <p>
-        Helping professionals present their experience with confidence.
-      </p>
-
-      <a href="#top" class="back-to-top">Back to top ↑</a>
+        <small>
+          You'll be redirected to Google Forms to submit
+          your details and resume.
+        </small>
+      </div>
 
     </div>
+  </div>
+</section>
 
-    <div class="container footer-bottom">
-      <span>© <span id="year"></span> CV Mentor. All rights reserved.</span>
-      <span>Built for your next career move.</span>
+<section id="faq">
+  <div class="container">
+
+    <div class="section-heading reveal">
+      <div class="eyebrow">Good to know</div>
+      <h2>Frequently asked <span class="gradient-text">questions.</span></h2>
     </div>
 
-  </footer>
+    <div class="faq-list reveal">
 
+      <details>
+        <summary>How do I request a resume review?</summary>
+        <p>Click the resume review button, complete the Google Form, and upload your CV.</p>
+      </details>
 
-  <!-- Floating WhatsApp -->
-  <a
-    class="floating-whatsapp"
-    href="https://wa.me/919325300574?text=Hi%20CV%20Mentor%2C%20I%20am%20interested%20in%20your%20resume%20services."
-    target="_blank"
-    rel="noopener noreferrer"
-    aria-label="Contact CV Mentor on WhatsApp"
-  >
-    <span>◉</span>
-    <span class="floating-whatsapp-text">Let's talk</span>
-  </a>
+      <details>
+        <summary>Which resume formats can I submit?</summary>
+        <p>Please follow the file format and size restrictions shown in the Google Form upload field.</p>
+      </details>
 
+      <details>
+        <summary>Do I need a Google account to upload my CV?</summary>
+        <p>Google Forms file uploads generally require you to sign in to a Google account. This is a Google Forms requirement.</p>
+      </details>
 
-  <script src="script.js"></script>
+      <details>
+        <summary>Will my resume be publicly visible?</summary>
+        <p>Your uploaded resume is submitted privately through Google Forms. CV Mentor should keep the response spreadsheet and uploaded files private.</p>
+      </details>
+
+      <details>
+        <summary>Are other CV Mentor services available?</summary>
+        <p>We're currently focusing on resume reviews. Additional career services may be introduced in the future.</p>
+      </details>
+
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer>
+  <div class="container footer-content">
+
+    <a href="#" class="logo">
+      <span class="logo-mark">✓</span>
+      CV Mentor
+    </a>
+
+    <div class="footer-links">
+      <a href="#home">Home</a>
+      <a href="#why-us">Why Us</a>
+      <a href="#apply">Resume Review</a>
+      <a href="#faq">FAQ</a>
+    </div>
+
+    <span>© <span id="year"></span> CV Mentor. All rights reserved.</span>
+
+  </div>
+</footer>
+
+<a class="whatsapp"
+   href="https://wa.me/917030493146"
+   target="_blank"
+   rel="noopener noreferrer"
+   aria-label="Contact CV Mentor on WhatsApp">
+   ☎
+</a>
+
+<script>
+const menuToggle = document.getElementById('menuToggle');
+const navLinks = document.getElementById('navLinks');
+
+menuToggle.addEventListener('click', () => {
+  navLinks.classList.toggle('open');
+});
+
+document.querySelectorAll('.nav-links a').forEach(link => {
+  link.addEventListener('click', () => navLinks.classList.remove('open'));
+});
+
+document.getElementById('year').textContent = new Date().getFullYear();
+
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add('visible');
+      observer.unobserve(entry.target);
+    }
+  });
+}, { threshold: 0.12 });
+
+document.querySelectorAll('.reveal').forEach(element => {
+  observer.observe(element);
+});
+</script>
 
 </body>
 </html>
