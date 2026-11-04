@@ -1,159 +1,695 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="CV Mentor helps professionals and freshers create clear, ATS-friendly resumes, cover letters, and LinkedIn profiles.">
-  <meta name="theme-color" content="#101c3a">
-  <title>CV Mentor | Resumes That Move Your Career Forward</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>CV Mentor | Professional Resume Writing & Review</title>
+
+  <meta
+    name="description"
+    content="Build a resume that opens doors. CV Mentor offers professional resume writing, ATS optimization, and resume reviews for ambitious professionals."
+  />
+
+  <meta name="theme-color" content="#0b1224" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
-  <header class="site-header">
-    <nav class="nav container" aria-label="Main navigation">
-      <a class="brand" href="#home"><span class="brand-mark">CV</span><span>CV <b>Mentor</b></span></a>
-      <button class="menu-toggle" id="menuToggle" aria-label="Open navigation" aria-expanded="false">☰</button>
-      <div class="nav-links" id="navLinks">
+
+  <!-- Navigation -->
+  <header class="header" id="top">
+    <div class="container nav-container">
+
+      <a href="#top" class="brand" aria-label="CV Mentor home">
+        <span class="brand-icon">CV</span>
+        <span class="brand-text">CV<span>Mentor</span></span>
+      </a>
+
+      <button
+        class="menu-toggle"
+        id="menuToggle"
+        aria-label="Open navigation menu"
+        aria-expanded="false"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="navigation" id="navigation">
         <a href="#services">Services</a>
         <a href="#process">How it works</a>
-        <a href="#pricing">Packages</a>
+        <a href="#about">Why CV Mentor</a>
         <a href="#faq">FAQs</a>
-        <a class="nav-cta" href="#contact">Get started</a>
-      </div>
-    </nav>
+        <a href="#contact" class="nav-cta">Get started <span>↗</span></a>
+      </nav>
+
+    </div>
   </header>
 
+
+  <!-- Hero -->
   <main>
-    <section class="hero" id="home">
+
+    <section class="hero">
+      <div class="hero-glow hero-glow-one"></div>
+      <div class="hero-glow hero-glow-two"></div>
+
       <div class="container hero-grid">
-        <div class="hero-copy">
-          <span class="eyebrow"><span class="dot"></span> Career documents, made clearer</span>
-          <h1>Your experience deserves a <span>better resume.</span></h1>
-          <p class="hero-text">Make your next career move with a professionally written, recruiter-friendly resume that presents your strengths with confidence.</p>
+
+        <div class="hero-content reveal">
+
+          <div class="eyebrow">
+            <span class="eyebrow-dot"></span>
+            Your next career move starts here
+          </div>
+
+          <h1>
+            Your experience<br />
+            deserves a <span>better resume.</span>
+          </h1>
+
+          <p class="hero-description">
+            Stand out with a professionally crafted resume that highlights
+            your strengths, tells your story, and helps you move confidently
+            toward your next opportunity.
+          </p>
+
           <div class="hero-actions">
-            <a class="button button-primary" href="#contact">Get resume help <span>→</span></a>
-            <a class="button button-quiet" href="#services">Explore services</a>
+            <a href="#contact" class="button button-primary">
+              Upgrade my resume <span>↗</span>
+            </a>
+
+            <a href="#services" class="button button-secondary">
+              Explore services
+            </a>
           </div>
-          <div class="hero-trust">
-            <div class="trust-icon">✓</div>
-            <p><strong>Personalized support</strong><br><span>Built around your experience and goals</span></p>
-          </div>
-        </div>
-        <div class="hero-visual" aria-label="Resume preview illustration">
-          <div class="floating-label label-top">Career-ready presentation</div>
-          <div class="resume-card">
-            <div class="resume-top">
-              <div class="resume-avatar">CV</div>
-              <div><div class="resume-name">YOUR NAME</div><div class="resume-role">Professional Title</div></div>
+
+          <div class="hero-proof">
+            <div class="proof-avatars" aria-hidden="true">
+              <span>R</span>
+              <span>A</span>
+              <span>P</span>
+              <span>+</span>
             </div>
-            <div class="resume-line wide"></div><div class="resume-line"></div><div class="resume-line short"></div>
-            <div class="resume-section">PROFESSIONAL SUMMARY</div>
-            <div class="resume-line wide"></div><div class="resume-line wide"></div><div class="resume-line"></div>
-            <div class="resume-section">EXPERIENCE</div>
-            <div class="resume-bullet"><i></i><span></span></div><div class="resume-bullet"><i></i><span></span></div><div class="resume-bullet"><i></i><span></span></div>
-            <div class="resume-section">SKILLS</div>
-            <div class="skill-tags"><span>Leadership</span><span>Problem solving</span><span>Communication</span></div>
-            <div class="resume-badge">Clear • Relevant • Professional</div>
+
+            <div>
+              <strong>Career-focused resume support</strong>
+              <p>Personalized guidance for your next move</p>
+            </div>
           </div>
-          <div class="floating-label label-bottom"><span class="check-circle">✓</span> Your story, presented well</div>
-          <div class="hero-orb orb-one"></div><div class="hero-orb orb-two"></div>
+
         </div>
+
+
+        <!-- Resume preview -->
+        <div class="hero-visual reveal">
+
+          <div class="floating-label floating-label-top">
+            <span class="floating-icon">✦</span>
+            ATS-friendly structure
+          </div>
+
+          <div class="resume-card">
+
+            <div class="resume-top">
+              <div class="resume-avatar">JD</div>
+
+              <div>
+                <h3>Jordan Davis</h3>
+                <p>Cloud Infrastructure Engineer</p>
+              </div>
+
+              <div class="resume-status">
+                <span></span> Resume preview
+              </div>
+            </div>
+
+            <div class="resume-contact">
+              jordan@email.com &nbsp; • &nbsp; LinkedIn &nbsp; • &nbsp; Pune, India
+            </div>
+
+            <div class="resume-section">
+              <h4>PROFESSIONAL SUMMARY</h4>
+              <div class="resume-line long"></div>
+              <div class="resume-line long"></div>
+              <div class="resume-line medium"></div>
+            </div>
+
+            <div class="resume-section">
+              <h4>PROFESSIONAL EXPERIENCE</h4>
+
+              <div class="resume-job">
+                <div class="resume-job-heading">
+                  <strong>Senior Cloud Engineer</strong>
+                  <span>2023 — Present</span>
+                </div>
+
+                <div class="resume-line long"></div>
+                <div class="resume-line medium"></div>
+              </div>
+
+              <div class="resume-job">
+                <div class="resume-job-heading">
+                  <strong>Infrastructure Engineer</strong>
+                  <span>2020 — 2023</span>
+                </div>
+
+                <div class="resume-line long"></div>
+                <div class="resume-line short"></div>
+              </div>
+            </div>
+
+            <div class="resume-section">
+              <h4>CORE SKILLS</h4>
+
+              <div class="resume-skills">
+                <span>Cloud</span>
+                <span>Linux</span>
+                <span>Automation</span>
+                <span>Infrastructure</span>
+              </div>
+            </div>
+
+            <div class="resume-bottom">
+              <span>CV MENTOR</span>
+              <span>Career-ready presentation</span>
+            </div>
+
+          </div>
+
+          <div class="floating-label floating-label-bottom">
+            <span class="check-icon">✓</span>
+            Your experience. Clearly presented.
+          </div>
+
+        </div>
+
       </div>
     </section>
 
-    <section class="proof-strip">
-      <div class="container proof-grid">
-        <div><span class="proof-symbol">✦</span><span>Human-centered writing</span></div>
-        <div><span class="proof-symbol">◎</span><span>ATS-conscious formatting</span></div>
-        <div><span class="proof-symbol">↗</span><span>Career-focused guidance</span></div>
+
+    <!-- Offer -->
+    <section class="offer-section">
+      <div class="container">
+
+        <div class="offer-card reveal">
+
+          <div class="offer-left">
+            <div class="offer-tag">
+              <span>✦</span> LIMITED-TIME OFFER
+            </div>
+
+            <h2>Give your resume the attention it deserves.</h2>
+
+            <p>
+              Get your resume reviewed by CV Mentor at a special introductory price.
+            </p>
+          </div>
+
+          <div class="offer-price">
+            <span class="offer-price-label">Resume review</span>
+
+            <div class="price">
+              <span class="currency">₹</span>99
+            </div>
+
+            <span class="offer-validity">Offer valid until November 30, 2026</span>
+
+            <a
+              href="https://wa.me/917030493146?text=Hi%20CV%20Mentor%2C%20I%20am%20interested%20in%20the%20%E2%82%B999%20resume%20review%20offer."
+              class="button button-light"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Claim this offer <span>↗</span>
+            </a>
+          </div>
+
+        </div>
+
       </div>
     </section>
 
-    <section class="section container" id="services">
-      <div class="section-heading">
-        <span class="eyebrow">What we can help with</span>
-        <h2>Career documents that work <span>harder for you.</span></h2>
-        <p>Choose the support you need—from a fresh resume to a complete job-application refresh.</p>
+
+    <!-- Services -->
+    <section class="section services-section" id="services">
+
+      <div class="container">
+
+        <div class="section-heading reveal">
+          <div class="section-label">WHAT WE DO</div>
+
+          <h2>
+            The right resume for<br />
+            <span>your next opportunity.</span>
+          </h2>
+
+          <p>
+            Whether you're starting out, changing careers, or aiming higher,
+            we help present your professional story with clarity.
+          </p>
+        </div>
+
+
+        <div class="services-grid">
+
+          <article class="service-card reveal">
+
+            <div class="service-icon icon-blue">✎</div>
+
+            <div class="service-number">01</div>
+
+            <h3>Resume Writing</h3>
+
+            <p>
+              A professionally written resume that highlights your experience,
+              achievements, and career strengths.
+            </p>
+
+            <a href="#contact" class="text-link">
+              Discuss your resume <span>↗</span>
+            </a>
+
+          </article>
+
+
+          <article class="service-card service-card-featured reveal">
+
+            <div class="service-icon icon-purple">⌕</div>
+
+            <div class="service-number">02</div>
+
+            <div class="service-badge">POPULAR</div>
+
+            <h3>Resume Review</h3>
+
+            <p>
+              Get practical feedback on your existing resume, including
+              structure, clarity, presentation, and improvement areas.
+            </p>
+
+            <a href="#contact" class="text-link">
+              Get your resume reviewed <span>↗</span>
+            </a>
+
+          </article>
+
+
+          <article class="service-card reveal">
+
+            <div class="service-icon icon-green">↗</div>
+
+            <div class="service-number">03</div>
+
+            <h3>ATS Optimization</h3>
+
+            <p>
+              Improve resume readability and organization with relevant
+              keywords and a clear, recruiter-friendly structure.
+            </p>
+
+            <a href="#contact" class="text-link">
+              Improve my resume <span>↗</span>
+            </a>
+
+          </article>
+
+        </div>
+
       </div>
-      <div class="service-grid">
-        <article class="service-card"><div class="service-icon icon-blue">▤</div><h3>Resume writing</h3><p>A tailored resume that communicates your experience, strengths, and impact clearly.</p><a href="#contact">Explore service <span>→</span></a></article>
-        <article class="service-card"><div class="service-icon icon-purple">⌕</div><h3>ATS resume review</h3><p>Improve structure, readability, keywords, and formatting for applicant tracking systems.</p><a href="#contact">Explore service <span>→</span></a></article>
-        <article class="service-card"><div class="service-icon icon-green">✎</div><h3>Cover letter</h3><p>A focused cover letter aligned with the role, company, and your career story.</p><a href="#contact">Explore service <span>→</span></a></article>
-        <article class="service-card"><div class="service-icon icon-orange">in</div><h3>LinkedIn profile</h3><p>Refresh your headline, About section, and experience to strengthen your professional presence.</p><a href="#contact">Explore service <span>→</span></a></article>
-      </div>
+
     </section>
 
+
+    <!-- Credibility -->
+    <section class="credibility-section" id="about">
+
+      <div class="container credibility-grid">
+
+        <div class="credibility-content reveal">
+
+          <div class="section-label">YOUR CAREER. OUR FOCUS.</div>
+
+          <h2>
+            Your achievements<br />
+            should never get<br />
+            <span>lost on a page.</span>
+          </h2>
+
+          <p>
+            A resume is more than a list of responsibilities. It is an
+            opportunity to communicate your value, experience, and potential.
+          </p>
+
+          <p>
+            CV Mentor helps professionals present their career journey
+            with a clear, structured, and professional resume.
+          </p>
+
+          <a href="#contact" class="button button-primary">
+            Let's improve your resume <span>↗</span>
+          </a>
+
+        </div>
+
+
+        <div class="credibility-panel reveal">
+
+          <div class="credibility-panel-header">
+            <span class="panel-dot"></span>
+            PROFESSIONAL RESUME SUPPORT
+          </div>
+
+          <div class="credibility-stat">
+            <span class="stat-icon">✦</span>
+            <div>
+              <h3>Professionals</h3>
+              <p>Resume support for professionals working at organizations including Microsoft and Amazon.</p>
+            </div>
+          </div>
+
+          <div class="panel-divider"></div>
+
+          <div class="credibility-stat">
+            <span class="stat-icon">◎</span>
+            <div>
+              <h3>Personalized approach</h3>
+              <p>Resume guidance shaped around your experience, target role, and career goals.</p>
+            </div>
+          </div>
+
+          <div class="panel-divider"></div>
+
+          <div class="credibility-stat">
+            <span class="stat-icon">↗</span>
+            <div>
+              <h3>Career-focused presentation</h3>
+              <p>Clear formatting, relevant achievements, and professional storytelling.</p>
+            </div>
+          </div>
+
+          <div class="panel-note">
+            <span>✦</span>
+            Your career story, presented with purpose.
+          </div>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- Process -->
     <section class="section process-section" id="process">
-      <div class="container process-grid">
-        <div class="section-heading align-left">
-          <span class="eyebrow">Simple, collaborative process</span>
-          <h2>From your current CV to a <span>stronger story.</span></h2>
-          <p>We keep the process straightforward and work with the information you provide.</p>
-          <a class="button button-primary" href="#contact">Start your request <span>→</span></a>
+
+      <div class="container">
+
+        <div class="section-heading reveal">
+          <div class="section-label">SIMPLE PROCESS</div>
+
+          <h2>
+            From resume to <span>ready.</span>
+          </h2>
+
+          <p>
+            Getting started is straightforward. Tell us where you are
+            and where you want to go.
+          </p>
         </div>
-        <div class="steps">
-          <div class="step"><span class="step-number">01</span><div><h3>Share your details</h3><p>Send your existing resume, target role, and key career details.</p></div></div>
-          <div class="step"><span class="step-number">02</span><div><h3>Discuss your goals</h3><p>We clarify the role you want and the experience you want to highlight.</p></div></div>
-          <div class="step"><span class="step-number">03</span><div><h3>Review your draft</h3><p>Review the draft and share factual corrections or feedback.</p></div></div>
-          <div class="step"><span class="step-number">04</span><div><h3>Receive final files</h3><p>Get your agreed deliverables in an easy-to-use format.</p></div></div>
+
+
+        <div class="process-grid">
+
+          <div class="process-step reveal">
+            <div class="step-number">01</div>
+            <div class="step-line"></div>
+            <h3>Share your resume</h3>
+            <p>Send your existing resume and tell us about your career goals.</p>
+          </div>
+
+          <div class="process-step reveal">
+            <div class="step-number">02</div>
+            <div class="step-line"></div>
+            <h3>Discuss your needs</h3>
+            <p>We understand your target role and the improvements you need.</p>
+          </div>
+
+          <div class="process-step reveal">
+            <div class="step-number">03</div>
+            <div class="step-line"></div>
+            <h3>Improve your resume</h3>
+            <p>Receive professional guidance to help strengthen your resume.</p>
+          </div>
+
         </div>
+
       </div>
+
     </section>
 
-    <section class="section container" id="pricing">
-      <div class="section-heading">
-        <span class="eyebrow">Transparent starting packages</span>
-        <h2>Choose your <span>career support.</span></h2>
-        <p>These are editable example prices. Update them to match your actual services before publishing.</p>
-      </div>
-      <div class="pricing-grid">
-        <article class="price-card">
-          <span class="package-label">STARTER</span><h3>Resume Review</h3><p class="price">₹299 <small>/ starting at</small></p>
-          <p class="package-desc">For a resume that needs feedback and direction.</p>
-          <ul><li>Resume review</li><li>Improvement suggestions</li><li>Formatting feedback</li></ul>
-          <a class="button button-outline" href="#contact">Ask about this package</a>
-        </article>
-        <article class="price-card featured">
-          <div class="popular-tag">Most popular</div><span class="package-label">CAREER READY</span><h3>Resume Rewrite</h3><p class="price">₹799 <small>/ starting at</small></p>
-          <p class="package-desc">For professionals ready to refresh their resume.</p>
-          <ul><li>Resume rewrite</li><li>ATS-conscious structure</li><li>One feedback round</li></ul>
-          <a class="button button-primary" href="#contact">Choose this package <span>→</span></a>
-        </article>
-        <article class="price-card">
-          <span class="package-label">COMPLETE</span><h3>Career Bundle</h3><p class="price">₹1,499 <small>/ starting at</small></p>
-          <p class="package-desc">For a more complete job-application refresh.</p>
-          <ul><li>Resume rewrite</li><li>Cover letter</li><li>LinkedIn profile guidance</li></ul>
-          <a class="button button-outline" href="#contact">Ask about this package</a>
-        </article>
-      </div>
-      <p class="pricing-note">Final pricing may depend on experience level, complexity, and scope. No interview or job outcome is guaranteed.</p>
-    </section>
 
-    <section class="cta-section" id="contact">
-      <div class="container cta-box">
-        <div><span class="eyebrow eyebrow-light">Ready for your next move?</span><h2>Let’s make your experience <span>stand out.</span></h2><p>Tell us about your career goal and the resume support you need.</p></div>
-        <div class="cta-actions">
-          <a class="button button-white" id="whatsappLink" href="https://wa.me/919325300574" target="_blank" rel="noopener">Chat on WhatsApp <span>↗</span></a>
-          <a class="cta-email" href="mailto:cvmentorsupport@gmail.com">cvmentorsupport@gmail.com</a>
+    <!-- Feedback -->
+    <section class="feedback-section">
+
+      <div class="container">
+
+        <div class="section-heading reveal">
+          <div class="section-label">CLIENT EXPERIENCES</div>
+
+          <h2>
+            Every career story<br />
+            <span>deserves to be heard.</span>
+          </h2>
+
+          <p>
+            We value the trust professionals place in us when they share
+            their career journeys.
+          </p>
         </div>
+
+
+        <div class="feedback-grid">
+
+          <!-- Replace these cards with genuine client feedback before publishing. -->
+
+          <article class="feedback-card reveal">
+            <div class="feedback-stars">★★★★★</div>
+
+            <p>
+              “Add a genuine client review here. Keep the feedback authentic
+              and use the client's approved wording.”
+            </p>
+
+            <div class="feedback-author">
+              <div class="author-avatar">C</div>
+              <div>
+                <strong>Client name</strong>
+                <span>Professional / Industry</span>
+              </div>
+            </div>
+          </article>
+
+
+          <article class="feedback-card reveal">
+            <div class="feedback-stars">★★★★★</div>
+
+            <p>
+              “Add another real testimonial here after receiving permission
+              from the client to publish it.”
+            </p>
+
+            <div class="feedback-author">
+              <div class="author-avatar author-avatar-purple">C</div>
+              <div>
+                <strong>Client name</strong>
+                <span>Professional / Industry</span>
+              </div>
+            </div>
+          </article>
+
+        </div>
+
       </div>
+
     </section>
 
-    <section class="section container faq-section" id="faq">
-      <div class="section-heading"><span class="eyebrow">A few quick answers</span><h2>Frequently asked <span>questions.</span></h2></div>
-      <div class="faq-list">
-        <details><summary>Do you guarantee interviews or job offers?</summary><p>No. We help improve the clarity, relevance, and presentation of your career documents, but hiring decisions are made by employers.</p></details>
-        <details><summary>Can you write a resume for freshers?</summary><p>Yes. Resume support can be tailored to freshers, career changers, and experienced professionals.</p></details>
-        <details><summary>What should I share to get started?</summary><p>Share your existing resume if available, target job title, job description, and any achievements or details you want included.</p></details>
-        <details><summary>How do I place an order?</summary><p>Contact us on WhatsApp or email to confirm the service, scope, price, and delivery timeline before sharing documents or making payment.</p></details>
+
+    <!-- FAQ -->
+    <section class="section faq-section" id="faq">
+
+      <div class="container faq-grid">
+
+        <div class="faq-heading reveal">
+
+          <div class="section-label">COMMON QUESTIONS</div>
+
+          <h2>
+            A few things<br />
+            you might <span>wonder.</span>
+          </h2>
+
+          <p>
+            Have another question? Contact us directly and we’ll be happy
+            to discuss your requirements.
+          </p>
+
+          <a href="#contact" class="text-link">
+            Ask us a question <span>↗</span>
+          </a>
+
+        </div>
+
+
+        <div class="faq-list reveal">
+
+          <details>
+            <summary>What is included in the ₹99 resume review?</summary>
+            <p>
+              The introductory offer is for resume review. Contact CV Mentor
+              to confirm the review scope, turnaround time, and delivery details
+              before placing your order.
+            </p>
+          </details>
+
+          <details>
+            <summary>Can you help with ATS-friendly resumes?</summary>
+            <p>
+              Yes. CV Mentor can help improve resume structure, readability,
+              relevant keywords, and alignment with your target role.
+              No resume can guarantee selection or interview calls.
+            </p>
+          </details>
+
+          <details>
+            <summary>How do I get started?</summary>
+            <p>
+              Click the WhatsApp button, share your resume and target role,
+              and discuss the service that best fits your needs.
+            </p>
+          </details>
+
+          <details>
+            <summary>Can you help experienced professionals?</summary>
+            <p>
+              Yes. Resume support can be tailored for experienced professionals,
+              career transitions, and people targeting new opportunities.
+            </p>
+          </details>
+
+        </div>
+
       </div>
+
     </section>
+
+
+    <!-- CTA -->
+    <section class="final-cta" id="contact">
+
+      <div class="cta-orb cta-orb-one"></div>
+      <div class="cta-orb cta-orb-two"></div>
+
+      <div class="container final-cta-content reveal">
+
+        <div class="cta-label">
+          <span></span> YOUR NEXT CHAPTER STARTS HERE
+        </div>
+
+        <h2>
+          Ready to make your<br />
+          resume <span>stand out?</span>
+        </h2>
+
+        <p>
+          Let’s work together to present your experience with confidence.
+        </p>
+
+        <div class="cta-buttons">
+
+          <a
+            href="https://wa.me/917030493146?text=Hi%20CV%20Mentor%2C%20I%20would%20like%20to%20discuss%20your%20resume%20services."
+            class="button button-white"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <span class="whatsapp-icon">◉</span>
+            Chat on WhatsApp
+          </a>
+
+          <a
+            href="mailto:cvmentorsupport@gmail.com?subject=Resume%20Services%20Inquiry"
+            class="button button-outline-white"
+          >
+            Email us <span>↗</span>
+          </a>
+
+        </div>
+
+        <div class="cta-contact">
+          <span>WhatsApp: +91 70304 93146</span>
+          <span>•</span>
+          <span>cvmentorsupport@gmail.com</span>
+        </div>
+
+      </div>
+
+    </section>
+
   </main>
 
+
+  <!-- Footer -->
   <footer class="footer">
-    <div class="container footer-main"><a class="brand brand-footer" href="#home"><span class="brand-mark">CV</span><span>CV <b>Mentor</b></span></a><p>Helping you present your career story with clarity.</p><div class="footer-links"><a href="#services">Services</a><a href="#pricing">Packages</a><a href="#contact">Contact</a></div></div>
-    <div class="container footer-bottom"><span>© <span id="year"></span> CV Mentor. All rights reserved.</span><span>cvmentor.in</span></div>
+
+    <div class="container footer-top">
+
+      <a href="#top" class="brand footer-brand">
+        <span class="brand-icon">CV</span>
+        <span class="brand-text">CV<span>Mentor</span></span>
+      </a>
+
+      <p>
+        Helping professionals present their experience with confidence.
+      </p>
+
+      <a href="#top" class="back-to-top">Back to top ↑</a>
+
+    </div>
+
+    <div class="container footer-bottom">
+      <span>© <span id="year"></span> CV Mentor. All rights reserved.</span>
+      <span>Built for your next career move.</span>
+    </div>
+
   </footer>
+
+
+  <!-- Floating WhatsApp -->
+  <a
+    class="floating-whatsapp"
+    href="https://wa.me/917030493146?text=Hi%20CV%20Mentor%2C%20I%20am%20interested%20in%20your%20resume%20services."
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Contact CV Mentor on WhatsApp"
+  >
+    <span>◉</span>
+    <span class="floating-whatsapp-text">Let's talk</span>
+  </a>
+
+
   <script src="script.js"></script>
+
 </body>
 </html>
